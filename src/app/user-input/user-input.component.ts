@@ -1,17 +1,12 @@
-import { Component, inject, output, signal } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { InvestmentInput } from '../investment-input.model';
+import { Component, inject, signal } from '@angular/core';
 import { InvestmentService } from '../investement.service';
 
 @Component({
   selector: 'app-user-input',
-  standalone: true,
-  imports: [FormsModule],
   templateUrl: './user-input.component.html',
   styleUrl: './user-input.component.css',
 })
 export class UserInputComponent {
-
   private investmentService = inject(InvestmentService); // Inject service using signals
   // constructor(private investmentService: InvestmentService){} // Inject service using constructor
 
